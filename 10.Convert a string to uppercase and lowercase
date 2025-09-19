@@ -1,0 +1,26 @@
+ackage practice;
+
+public class Practice {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        String upper = "";
+        String lower = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch >= 'a' && ch <= 'z') {
+                upper += (char)(ch - ('a' - 'A'));
+                lower += ch;
+            } else if (ch >= 'A' && ch <= 'Z') {
+                lower += (char)(ch + ('a' - 'A'));
+                upper += ch;
+            } else {
+                upper += ch;
+                lower += ch;
+            }
+        }
+
+        System.out.println("Uppercase: " + upper);
+        System.out.println("Lowercase: " + lower);
+    }
+}
