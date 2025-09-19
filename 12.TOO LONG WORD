@@ -1,0 +1,22 @@
+package practice;
+
+import java.util.Scanner;
+
+public class Practice {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a word: ");
+        String word = sc.next();
+
+        if (word.length() > 10) {
+            int middleCount = word.length() - 2;
+            String abbreviation = word.charAt(0) + String.valueOf(middleCount) + word.charAt(word.length() - 1);
+            System.out.println("Abbreviated word: " + abbreviation);
+        } else {
+            System.out.println("Word is fine: " + word);
+        }
+
+        sc.close();
+    }
+}
