@@ -1,0 +1,19 @@
+package practice;
+
+import java.util.Scanner;
+
+public class Practice {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int X = sc.nextInt();
+
+        int subscriptions = (N + 5) / 6; // ceil(N / 6)
+        int totalCost = subscriptions * X;
+
+        System.out.println(totalCost);
+
+        sc.close();
+    }
+}
