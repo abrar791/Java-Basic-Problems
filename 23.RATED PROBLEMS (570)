@@ -1,0 +1,23 @@
+package practice;
+
+import java.util.Scanner;
+
+public class Practice {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int X = sc.nextInt();
+
+        int remaining = N - X;
+        int packets = 0;
+
+        if (remaining > 0) {
+            packets = (remaining + 3) / 4;
+        }
+
+        System.out.println(packets);
+
+        sc.close();
+    }
+}
