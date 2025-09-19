@@ -1,0 +1,22 @@
+package practice;
+
+import java.util.Scanner;
+
+public class Practice {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a word: ");
+        String word = sc.next();
+
+        if (word.length() > 0) {
+            char firstChar = Character.toUpperCase(word.charAt(0));
+            String capitalized = firstChar + word.substring(1);
+            System.out.println("Capitalized word: " + capitalized);
+        } else {
+            System.out.println("Empty word!");
+        }
+
+        sc.close();
+    }
+}
